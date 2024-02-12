@@ -20,5 +20,5 @@ public class User {
     private Long id;
     private String name;
     private String password;
-    private Role role = Role.USER;
+    private String role;
 }
