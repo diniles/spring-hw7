@@ -1,11 +1,13 @@
 package ru.gb.hw7;
 
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
+@AllArgsConstructor
 public class MainController {
     UserService userService;
 
