@@ -27,13 +27,12 @@ public class UserDetailsImpl implements UserDetails {
     }
 
     public static UserDetailsImpl build(User user) {
-        List<GrantedAuthority> rolesList = List.of(new SimpleGrantedAuthority(User.getRole().name));
+        List<GrantedAuthority> authorityList = List.of(new SimpleGrantedAuthority(user.getRole()));
         return new UserDetailsImpl(
                 user.getId(),
                 user.getName(),
                 user.getPassword(),
-                user.getRole()
-        );
+                authorityList);
     }
 
     @Override
