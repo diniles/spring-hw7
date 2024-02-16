@@ -8,9 +8,15 @@
 <h1>New user registration</h1>
 <form th:action="@{/register}" method="post" th:object="${user}">
     <div>
+        <label for="name">
+            Name:
+        </label>
         <input th:field="*{name}" type="text" name="name" id="name" placeholder="Username"/>
     </div>
     <div>
+        <label for="password">
+            Password:
+        </label>
         <input th:field="*{password}" type="password" name="password" id="password" placeholder="password"/>
     </div>
     <div>
